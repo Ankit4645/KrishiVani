@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/newsImage"
+        android:layout_width="wrap_content"
+        android:layout_height="583dp"
+        android:layout_weight="3"
+        android:scaleType="centerCrop"
+        android:src="@drawable/news1" />
+
+    <TextView
+        android:id="@+id/newsText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="News headline goes here"
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+</LinearLayout>

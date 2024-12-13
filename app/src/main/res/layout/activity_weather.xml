@@ -1,0 +1,60 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="#E0F7FA">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weather App"
+        android:textSize="24sp"
+        android:textColor="#00796B"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:paddingBottom="24dp"
+        android:fontFamily="sans-serif-medium"/>
+
+    <EditText
+        android:id="@+id/et_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter City Name"
+        android:padding="16dp"
+        android:background="@drawable/rounded_edittext"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="sans-serif"/>
+
+    <Button
+        android:id="@+id/btn_get_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Weather"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#00796B"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:background="@drawable/rounded_button"/>
+
+    <TextView
+        android:id="@+id/tv_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weather Info will appear here"
+        android:paddingTop="20dp"
+        android:textColor="#00796B"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif"
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center"/>
+</LinearLayout>

@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="377dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="24dp"
+        android:text="  Welcome to KrishiVani"
+        android:textColor="@color/primary_text"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="362dp"
+        android:layout_height="353dp"
+        app:srcCompat="@drawable/krishivani" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/primary"
+        android:text="Login"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/btnSignup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/secondary"
+        android:text="Sign Up"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

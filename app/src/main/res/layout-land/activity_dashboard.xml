@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="@color/background_color">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select a Service"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_text"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Mandi Price Button -->
+    <ImageButton
+        android:id="@+id/btnMandiPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mandi"
+        android:contentDescription="Mandi Price"
+        android:layout_marginBottom="16dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless" />
+
+    <!-- Weather Button -->
+    <ImageButton
+        android:id="@+id/btnWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/weather"
+        android:contentDescription="Weather"
+        android:layout_marginBottom="16dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless" />
+
+    <!-- Rent Button -->
+    <ImageButton
+        android:id="@+id/btnRent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rent"
+        android:contentDescription="Rent"
+        android:layout_marginBottom="16dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless" />
+
+    <!-- News Button -->
+    <ImageButton
+        android:id="@+id/btnNews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/news"
+        android:contentDescription="News"
+        android:layout_marginBottom="16dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless" />
+
+</LinearLayout>
