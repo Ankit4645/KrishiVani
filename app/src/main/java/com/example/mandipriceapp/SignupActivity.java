@@ -1,33 +1,47 @@
 package com.example.mandipriceapp;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SignupActivity extends AppCompatActivity {
+
+    EditText editTextFullName, editTextEmail, editTextPassword;
+    Button buttonSignup;
+    CsvHelper csvHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        EditText etName = findViewById(R.id.etName);
-        EditText etEmail = findViewById(R.id.etEmail);
-        EditText etPassword = findViewById(R.id.etPassword);
-        Button btnSignup = findViewById(R.id.btnSignup);
+        editTextFullName = findViewById(R.id.etName);
+        editTextEmail = findViewById(R.id.etEmail);
+        editTextPassword = findViewById(R.id.etPassword);
+        buttonSignup = findViewById(R.id.btnSignup);
 
-        btnSignup.setOnClickListener(v -> {
-            String name = etName.getText().toString().trim();
-            String email = etEmail.getText().toString().trim();
-            String password = etPassword.getText().toString().trim();
+        csvHelper = new CsvHelper(this);
 
-            if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {
-                Toast.makeText(SignupActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
-            } else {
-                // Add logic to register user
-                Toast.makeText(SignupActivity.this, "Account created successfully!", Toast.LENGTH_SHORT).show();
+        // Signup Button Click
+        buttonSignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String fullName = editTextFullName.getText().toString();
+                String email = editTextEmail.getText().toString();
+                String password = editTextPassword.getText().toString();
+
+                if (csvHelper.isEmailRegistered(email)) {
+                    Toast.makeText(SignupActivity.this, "Email is already registered", Toast.LENGTH_SHORT).show();
+                } else if (csvHelper.writeUser(fullName, email, password)) {
+                    Toast.makeText(SignupActivity.this, "Signup Successful!", Toast.LENGTH_SHORT).show();
+                    finish(); // Close Signup Page
+                } else {
+                    Toast.makeText(SignupActivity.this, "Signup Failed", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

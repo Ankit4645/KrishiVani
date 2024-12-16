@@ -33,13 +33,13 @@ public class DashboardActivity extends AppCompatActivity {
             Intent intent = new Intent(DashboardActivity.this, WeatherActivity.class);
             startActivity(intent);
         });
-  /*
+
         // Set OnClickListener for Rent button
         btnRent.setOnClickListener(v -> {
             // Intent to go to Rent page (create this activity later)
             Intent intent = new Intent(DashboardActivity.this, RentActivity.class);
             startActivity(intent);
-        });*/
+        });
 
         // Set OnClickListener for News button
         btnNews.setOnClickListener(v -> {

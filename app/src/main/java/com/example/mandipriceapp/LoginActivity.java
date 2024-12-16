@@ -1,45 +1,57 @@
 package com.example.mandipriceapp;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
+    EditText editTextEmail, editTextPassword;
+    Button buttonLogin, buttonGoToSignup;
+    CsvHelper csvHelper;
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        EditText etEmail = findViewById(R.id.etEmail);
-        EditText etPassword = findViewById(R.id.etPassword);
-        Button btnLogin = findViewById(R.id.btnLogin);
+        editTextEmail = findViewById(R.id.etEmail);
+        editTextPassword = findViewById(R.id.etPassword);
+        buttonLogin = findViewById(R.id.btnLogin);
+        buttonGoToSignup = findViewById(R.id.buttonGoToSignup);
 
-        // Handle the login button click event
-        btnLogin.setOnClickListener(v -> {
-            String email = etEmail.getText().toString().trim();
-            String password = etPassword.getText().toString().trim();
+        csvHelper = new CsvHelper(this);
 
-            // Check if the email or password is empty
-            if (email.isEmpty() || password.isEmpty()) {
-                Toast.makeText(LoginActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
-            } else {
-                // Basic authentication logic (You can replace this with actual database validation)
-                if (email.equals("test@example.com") && password.equals("password123")) {
-                    // If login is successful, show success message
-                    Toast.makeText(LoginActivity.this, "Logged in successfully!", Toast.LENGTH_SHORT).show();
+        // Login Button Click
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String email = editTextEmail.getText().toString();
+                String password = editTextPassword.getText().toString();
 
-                    // Create an intent to navigate to the DashboardActivity
-                    Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
-                    startActivity(intent);
-                    finish(); // Close the login activity so the user can't go back to it
+                if (csvHelper.isValidUser(email, password)) {
+                    Toast.makeText(LoginActivity.this, "Login Successful!", Toast.LENGTH_SHORT).show();
+                    // Navigate to Mandi Price Page
+                    startActivity(new Intent(LoginActivity.this, DashboardActivity.class));
                 } else {
-                    // If credentials are incorrect, show error message
-                    Toast.makeText(LoginActivity.this, "Invalid email or password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Invalid Email or Password", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        // Go to Signup Button Click
+        buttonGoToSignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate to Signup Page
+                startActivity(new Intent(LoginActivity.this, SignupActivity.class));
             }
         });
     }
