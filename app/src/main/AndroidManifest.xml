@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Mandipriceapp"
         tools:targetApi="31">
         <activity
+            android:name=".chatBot"
+            android:exported="false" />
+        <activity
             android:name=".ReceiptActivity"
             android:exported="false" />
         <activity

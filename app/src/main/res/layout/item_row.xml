@@ -1,43 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#F5F5F5"
     android:orientation="vertical"
-    android:padding="10dp"
-    android:background="#F5F5F5">
+    android:padding="2dp">
 
     <ImageView
         android:id="@+id/itemImage"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:layout_gravity="center_horizontal"
-        android:contentDescription="Item Image" />
+        android:contentDescription="Item Image"
+        android:translationX="-130dp"
+        android:translationY="20dp" />
 
     <TextView
         android:id="@+id/itemName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="8dp"
         android:text="Item Name"
         android:textSize="18sp"
-        android:layout_gravity="center_horizontal"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:translationX="50dp"
+        android:translationY="-100dp" />
 
     <TextView
         android:id="@+id/itemPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Price per hour: $0.00"
         android:layout_gravity="center_horizontal"
-        android:textSize="16sp" />
+        android:text="Price per hour: $0.00"
+        android:textSize="16sp"
+        android:translationX="50dp"
+        android:translationY="-100dp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="8dp">
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:translationX="50dp"
+        android:translationY="-100dp">
 
         <Button
             android:id="@+id/decreaseQuantity"

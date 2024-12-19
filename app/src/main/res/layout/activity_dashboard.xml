@@ -2,10 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
+    android:background="@color/background_color"
     android:gravity="center"
-    android:background="@color/background_color">
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <!-- TextView for Header -->
     <TextView
@@ -22,17 +22,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_marginBottom="16dp"
         android:gravity="center"
-        android:layout_marginBottom="16dp">
+        android:orientation="horizontal">
 
         <!-- Mandi Price Button -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageButton
                 android:id="@+id/btnMandiPrice"
@@ -60,8 +60,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageButton
                 android:id="@+id/btnWeather"
@@ -90,17 +90,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_marginBottom="16dp"
         android:gravity="center"
-        android:layout_marginBottom="16dp">
+        android:orientation="horizontal">
 
         <!-- Rent Button -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageButton
                 android:id="@+id/btnRent"
@@ -154,4 +154,20 @@
 
     </LinearLayout>
 
+    <ImageButton
+        android:id="@+id/btchat"
+        android:layout_width="111dp"
+        android:layout_height="98dp"
+        android:layout_marginBottom="8dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="chat"
+        android:rotation="0"
+        android:rotationX="0"
+        android:rotationY="0"
+        android:scaleType="centerCrop"
+        android:src="@drawable/chatbot"
+        android:translationX="140dp"
+        android:translationY="20dp" />
+
 </LinearLayout>
+

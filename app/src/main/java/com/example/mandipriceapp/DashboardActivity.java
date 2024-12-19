@@ -18,6 +18,7 @@ public class DashboardActivity extends AppCompatActivity {
         ImageButton btnWeather = findViewById(R.id.btnWeather);
         ImageButton btnRent = findViewById(R.id.btnRent);
         ImageButton btnNews = findViewById(R.id.btnNews);
+        ImageButton btnchat = findViewById(R.id.btchat);
 
         // Set OnClickListener for Mandi Price button
         btnMandiPrice.setOnClickListener(v -> {
@@ -45,6 +46,11 @@ public class DashboardActivity extends AppCompatActivity {
         btnNews.setOnClickListener(v -> {
             // Intent to go to News page (create this activity later)
             Intent intent = new Intent(DashboardActivity.this, NewsActivity.class);
+            startActivity(intent);
+        });
+        btnchat.setOnClickListener(v -> {
+            // Intent to go to Rent page (create this activity later)
+            Intent intent = new Intent(DashboardActivity.this, chatBot.class);
             startActivity(intent);
         });
     }

@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ImageView for background -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/krishivani"
+        android:scaleType="centerCrop"
+        android:alpha="0.7"
+        />
+
+    <!-- RecyclerView to display messages -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView7"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+
+    <!-- Layout for the message input and send button -->
+    <LinearLayout
+        android:id="@+id/messageLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:padding="10dp">
+
+        <!-- EditText for user message -->
+        <EditText
+            android:id="@+id/editTextMessage8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/edit_text_background"
+            android:hint="Type your message"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColor="#000000" />
+
+        <!-- Send Button -->
+        <Button
+            android:id="@+id/buttonSend8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:textColor="#ffffff"
+            android:background="@drawable/btn_send_background" />
+    </LinearLayout>
+
+</RelativeLayout>
